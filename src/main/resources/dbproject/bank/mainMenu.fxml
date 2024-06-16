@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbproject.bank.MainMenu">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <TextField fx:id="footer" editable="false" focusTraversable="false" prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="B Badr" size="12.0" />
+         </font>
+      </TextField>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="494.0" prefWidth="935.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AmirKabir Bank" textAlignment="CENTER" wrappingWidth="631.013671875">
+               <font>
+                  <Font name="Forte" size="39.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="30.0" />
+               </VBox.margin>
+            </Text>
+            <BorderPane prefHeight="331.0" prefWidth="748.0">
+               <left>
+                  <HBox alignment="TOP_RIGHT" prefHeight="331.0" prefWidth="473.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="331.0" prefWidth="188.0">
+                           <children>
+                              <Button id="newPatient" fx:id="newPatient" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createNewAccount" prefHeight="165.0" prefWidth="165.0" text="Create new Account" textAlignment="JUSTIFY" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="73.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/bank-account%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button id="searchPatient" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#recentTransactions" prefHeight="165.0" prefWidth="178.0" text="Recent transactions" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="75.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/search2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="331.0" prefWidth="172.0">
+                           <children>
+                              <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cardToCard" prefHeight="150.0" prefWidth="167.0" text="Card-to-Card" wrapText="true">
+                                 <graphic>
+                                    <ImageView fitHeight="58.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/credit-card.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#transactionValidation" prefHeight="150.0" prefWidth="174.0" text="Transaction validation" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="73.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/valid.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets right="5.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </left>
+               <right>
+                  <HBox prefHeight="331.0" prefWidth="471.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="331.0" prefWidth="173.0">
+                           <children>
+                              <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#paya" prefHeight="151.0" prefWidth="173.0" text="Paya" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="57.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/credit-card-payment.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#LogOutButtonPressed" prefHeight="152.0" prefWidth="168.0" text="Log out" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="56.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/logout3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="331.0" prefWidth="177.0">
+                           <children>
+                              <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#satna" prefHeight="158.0" prefWidth="172.0" text="Satna" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="55.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/credit-card%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="exit" fx:id="exit" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exitButtonPressed" prefHeight="159.0" prefWidth="172.0" text="Exit" wrapText="true">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="54.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/exit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="5.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </right>
+               <VBox.margin>
+                  <Insets right="3.0" top="10.0" />
+               </VBox.margin>
+            </BorderPane>
+            <Text fill="#942a5d" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by Wasiq Barat, 2024" wrappingWidth="190.322265625">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Text>
+            <Line endX="100.0" startX="-100.0" />
+            <Text fill="#942a5d" layoutX="440.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:wasiqbarat@gmail.com" wrappingWidth="176.322265625">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#942a5d" layoutX="393.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telegram: @wasiqbarat" wrappingWidth="142.322265625">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
